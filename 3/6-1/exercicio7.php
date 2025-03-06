@@ -6,26 +6,22 @@
     <title>Document</title>
 </head>
 <body>
-<form action="exercicio1.php" metaphone="get">
+<form action="exercicio3.php" metaphone="get">
 
-<legend>exercicio 1</legend>
+<legend>exercicio 3</legend>
 <label for="num">informe um número</label>
 <input type="num" name="num" id="num" plaecholder ="0" required>
 </form>
 
     <?php 
-
+ $n = 2025 - $num
 if (isset($_GET["num"])){$num =$_GET["num"];
-if($num > 7){
-    echo"passou";
-}
-
-else if ($num == 6 || &num == 7){
-    echo"recuperação";
+if($n > 17){
+    echo"é maior de idade";
 }
 
 else{
-echo"reprovado";
+echo"é menor de idade";
 }}
 ?>
 </body>

@@ -11,7 +11,6 @@
 <legend>exercicio 3</legend>
 <label for="num1">informe um número</label>
 <input type="num1" name="num1" id="num1" plaecholder ="0" required>
-<label for="num2">informe um número</label>
 <input type="num2" name="num2" id="num2" plaecholder ="0" required>
 </form>
 
