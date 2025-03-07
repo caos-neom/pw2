@@ -53,9 +53,11 @@ else if ($nome_GET == "Feveriro"){
     else if ($_GET ==  "novembro"){
     echo"2 semestre";}
 
-    else ($_GET ==  "dezembro"){
+    else if($_GET ==  "dezembro"){
     echo"2 semestre";}
-    
+
+    else(){
+        echo"inválido"}
 
 ?>
 </body>
