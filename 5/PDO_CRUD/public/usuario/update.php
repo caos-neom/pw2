@@ -1,3 +1,6 @@
+<?php include '../../includes/header.php';
+
+include '../../includes/menu.php';?>
 <?php
 include '../../config/connection.php';
 if($_SERVER["REQUEST_METHOD"] == "GET") {
@@ -31,26 +34,28 @@ if(empty($password)){
     exit();
 }
 $stmt = $pdo->prepare('UPDATE usuario SET username = :username, password = :password WHERE id = :id');
-$stmt->bindParam(':id' , $username);
+$stmt->bindParam(':id' , $id);
 $stmt->bindParam(':username', $username);
 $stmt->bindParam(':password' , $password);
 $stmt->execute();
 
 
-Header('location: read.php');
+header('location: read.php');
 }
 
 
 
 ?>
 
-<form action="create.php" method="POST">
-    <input tye="text" name="id" value="<?php echo $usuario[0] ['id']?>">
+<form action="update.php" method="POST">
+    <input type="hidden" name="id" value="<?php echo $usuario[0] ['id']?>">
     <label for="username">Nome de usuário </label>
-    <input type="text" name="username" id="username" value="<?php echo $usuario[0] ['username'];?>">
+    <input type="text" name="username" id="username" value="<?php echo $usuario [0] ['username'];?>">
     <br><br>
     <label for="password">Senha</label>
     <input type="password" name="password" id="password">
     <br><br>
     <button type="submit">Atualizar</button>
 </form>
+
+<?php include '../../includes/footer.php';?>

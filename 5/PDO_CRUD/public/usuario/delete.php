@@ -1,3 +1,6 @@
+<?php include '../../includes/header.php';
+
+include '../../includes/menu.php';?>
 <?php 
     include '../../config/connection.php'; 
 
@@ -14,3 +17,5 @@
 
     Header("Location: read.php");
 ?>
+
+<?php include '../../includes/footer.php';?>
