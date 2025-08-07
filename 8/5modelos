@@ -1,0 +1,9 @@
+<?php
+
+class produto {
+    public $nome;
+    public $preço;
+    public $categoria;
+}
+
+?>
